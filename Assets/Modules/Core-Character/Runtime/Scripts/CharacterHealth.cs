@@ -17,7 +17,7 @@ namespace AS.Modules.CoreCharacter
         private void Start()
         {
             Health = m_MaxHealth;
-            UpdateHealthBar();
+            UpdateHealth();
         }
 
         internal void ApplayDamage(float damageAmount)
@@ -26,7 +26,7 @@ namespace AS.Modules.CoreCharacter
             Health = Mathf.Clamp(Health, 0, m_MaxHealth);
             OnChangeHealth?.Invoke(Health);
             CheckDie();
-            UpdateHealthBar();
+            UpdateHealth();
         }
 
         private void CheckDie()
@@ -37,9 +37,9 @@ namespace AS.Modules.CoreCharacter
             }
         }
 
-        private void UpdateHealthBar()
+        private void UpdateHealth()
         {
-            m_CharacterHUD.UpdateBar(Health / m_MaxHealth);
+            m_CharacterHUD.UpdateBar(Health / m_MaxHealth).UpdateText(Health);
         }
     }
 }

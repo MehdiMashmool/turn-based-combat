@@ -289,4 +289,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Reward: {fileID: 8611832922933709647}
-  m_Speed: 350
+  m_Speed: 500

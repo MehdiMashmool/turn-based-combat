@@ -46,6 +46,7 @@ namespace AS.Modules.Gameplay
         {
             Character enemy = GetDiedEnemy();
             CoinRewrad coinReward = Instantiate(m_CoinRewardPrefab, m_MainCanvas);
+            coinReward.transform.SetAsFirstSibling();
             coinReward.OnReach += OnReach;
             Vector3 from = Camera.main.WorldToScreenPoint(enemy.transform.position);
             Vector3 to = m_Target.position;

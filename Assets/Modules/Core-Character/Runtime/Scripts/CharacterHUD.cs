@@ -7,6 +7,18 @@ namespace AS.Modules.CoreCharacter
     {
         [SerializeField] private Image m_Bar;
 
+        private Camera m_Main;
+
+        private void Start()
+        {
+            m_Main = Camera.main;
+        }
+
+        private void Update()
+        {
+            transform.LookAt(m_Main.transform);
+        }
+
         /// <summary>
         /// </summary>
         /// <param name="amount">between 0-1</param>

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Target: {fileID: 5240139462787543427}
-  m_RunInAwake: 1
+  m_RunInAwake: 0
   m_StartState: {fileID: 8643307110139909282}
 --- !u!114 &5240139462787543427
 MonoBehaviour:

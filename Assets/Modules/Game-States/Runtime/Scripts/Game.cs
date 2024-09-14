@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace AS.Modules.GameStates
 {
-    internal class Game : Target 
+    public class Game : Target 
     {
-        internal IReadOnlyList<Character> Enemies => m_Enemies;
+        public IReadOnlyList<Character> Enemies => m_Enemies;
         internal IReadOnlyList<Path> Paths => m_Paths;
         internal Character Player => m_Player;
 

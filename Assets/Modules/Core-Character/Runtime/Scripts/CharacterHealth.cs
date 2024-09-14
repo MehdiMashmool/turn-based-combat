@@ -12,6 +12,7 @@ namespace AS.Modules.CoreCharacter
         internal event Action<float> OnChangeHealth;
 
         internal float Health { private set; get; }
+        internal bool IsAlive => Health > 0;
 
         private void Start()
         {

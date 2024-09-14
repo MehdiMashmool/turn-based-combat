@@ -1,6 +1,5 @@
-using UnityEngine;
-using AS.Modules.CoreCharacter;
 using System;
+using AS.Modules.CoreCharacter;
 
 namespace AS.Modules.GameCharacters
 {
@@ -9,7 +8,7 @@ namespace AS.Modules.GameCharacters
         public override void Action()
         {
             base.Action();
-            new NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

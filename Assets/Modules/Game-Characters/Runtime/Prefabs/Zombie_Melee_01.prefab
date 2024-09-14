@@ -192,7 +192,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abae281379d16a74c9761a9a1dcb3d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CharacterHUD: {fileID: 0}
+  m_CharacterHUD: {fileID: 3221708013537384835}
   m_MaxHealth: 100
 --- !u!114 &4395296324117509723
 MonoBehaviour:
@@ -425,3 +425,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6079169486619623619, guid: 0443d805886349b4b86920ecfcb8a5e4, type: 3}
   m_PrefabInstance: {fileID: 4933529413163877830}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3221708013537384835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7548776806707354693, guid: 0443d805886349b4b86920ecfcb8a5e4, type: 3}
+  m_PrefabInstance: {fileID: 4933529413163877830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0421923cda49a459678c7f81bf326b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

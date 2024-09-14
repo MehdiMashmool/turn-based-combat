@@ -2,7 +2,8 @@
     "name": "AS.Modules.Game-States",
     "rootNamespace": "AS.Modules.GameStates",
     "references": [
-        "GUID:9b88c048af417fc4981fdf326c4441a7"
+        "GUID:9b88c048af417fc4981fdf326c4441a7",
+        "GUID:6b5bce0b72d2b184ebe65ffbd933094d"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace AS.Modules.CoreCharacter
@@ -6,11 +7,19 @@ namespace AS.Modules.CoreCharacter
     [RequireComponent(typeof(CharacterHealth))]
     [RequireComponent(typeof(CharacterMover))]
     [RequireComponent(typeof(CharacterFighter))]
+    [DefaultExecutionOrder(-1)]
     public class Character : MonoBehaviour, IAttackTarget
     {
-        public Character Target => this;
+        public event Action<Character> OnFinishTurn;
+        public event Action OnDie
+        {
+            add => m_Health.OnDie += value;
+            remove => m_Health.OnDie -= value;
+        }
 
+        public Character Target => this;
         public float AttackPower => m_Fighter.Power;
+        public bool IsAlive => m_Health.IsAlive;
 
         private CharacterHealth m_Health;
         private CharacterAnimation m_Animation;
@@ -19,7 +28,7 @@ namespace AS.Modules.CoreCharacter
 
         private Character m_AttackTarget;
 
-        private void Start()
+        private void Awake()
         {
             m_Health = GetComponent<CharacterHealth>();
             m_Animation = GetComponent<CharacterAnimation>();
@@ -49,6 +58,11 @@ namespace AS.Modules.CoreCharacter
         /// Action in turn.
         /// </summary>
         public virtual void Action() { }
+
+        internal void InvokeFinishTurn()
+        {
+            OnFinishTurn?.Invoke(this);
+        }
 
         private void OnAttackAnimationEvent()
         {

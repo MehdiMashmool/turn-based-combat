@@ -24,6 +24,10 @@ namespace AS.Modules.GameCharacters
             {
                 if (HaveReadyEnemyToAttack(m_MeleeEnemies))
                 {
+                    Attack(FindClosestMeleeEnemies(m_MeleeEnemies));
+                }
+                else
+                {
                     Attack(FindLowestHealth(m_Enemies));
                 }
             }

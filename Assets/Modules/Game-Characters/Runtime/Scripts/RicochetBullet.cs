@@ -17,7 +17,7 @@ namespace AS.Modules.GameCharacters
         {
             IAttackTarget target = other.GetComponent<IAttackTarget>();
 
-            if (target != null)
+            if (target != null && (IAttackTarget)Target == target)
             {
                 target.Target.ApplayDamage(Shooter.AttackPower);
 

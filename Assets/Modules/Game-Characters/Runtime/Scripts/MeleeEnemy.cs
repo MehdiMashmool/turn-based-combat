@@ -25,6 +25,11 @@ namespace AS.Modules.GameCharacters
             }
         }
 
+        protected override void OnAttackAnimationFinish()
+        {
+            InvokeFinishTurn();
+        }
+
         private void OnReachTargetMeleeEnemy(Character enemy)
         {
             OnReachTarget -= OnReachTargetMeleeEnemy;

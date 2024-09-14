@@ -1,0 +1,16 @@
+{
+    "name": "AS.Modules.Stating",
+    "rootNamespace": "AS.Modules.Stating",
+    "references": [
+        "GUID:afb5b3665ad56a2469377bc425ed5a91"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

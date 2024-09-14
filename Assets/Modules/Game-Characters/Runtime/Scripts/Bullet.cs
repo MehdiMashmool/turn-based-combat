@@ -1,14 +1,18 @@
 using UnityEngine;
 using System.Collections;
+using AS.Modules.CoreCharacter;
 
-namespace AS.Modules.CoreCharacter
+namespace AS.Modules.GameCharacters
 {
     internal class Bullet : MonoBehaviour
     {
         [SerializeField] private float m_Speed = 50f;
 
-        internal void Shoot(Vector3 direction)
+        private Character m_Shooter;
+
+        internal void Shoot(Character shooter, Vector3 direction)
         {
+            m_Shooter = shooter;
             StartCoroutine(Moving(direction));
         }
 
@@ -24,11 +28,11 @@ namespace AS.Modules.CoreCharacter
 
         private void OnTriggerEnter(Collider other)
         {
-            IBulletTarget target = other.GetComponent<IBulletTarget>();
+            IAttackTarget target = other.GetComponent<IAttackTarget>();
 
             if (target != null)
             {
-                target.Target.ApplayDamageWithAttack();
+                target.Target.ApplayDamage(m_Shooter.AttackPower);
             }
 
             Destroy(this.gameObject);

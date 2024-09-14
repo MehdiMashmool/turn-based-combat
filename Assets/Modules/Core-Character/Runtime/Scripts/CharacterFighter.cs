@@ -3,11 +3,11 @@ using UnityEngine;
 namespace AS.Modules.CoreCharacter
 {
     [RequireComponent(typeof(CharacterAnimation))]
-    internal class CharacterFighter : MonoBehaviour
+    public class CharacterFighter : MonoBehaviour
     {
         [SerializeField] private float m_Power = 25f;
-        [SerializeField] private Transform m_SpawnPoint;
-        [SerializeField] private Bullet m_BulletPrefab;
+
+        internal float Power => m_Power;
 
         private CharacterAnimation m_Animation;
         private CharacterHealth m_Health;
@@ -18,18 +18,11 @@ namespace AS.Modules.CoreCharacter
             m_Health = GetComponent<CharacterHealth>();
         }
 
-        internal void Attack(Character shooter, Character enemy)
+        internal void TryAttack()
         {
             m_Animation.Attack();
-            Vector3 direction = enemy.transform.position - shooter.transform.position;
-            Debug.DrawRay(shooter.transform.position, direction, Color.red, 10);
-            Bullet bullet = Instantiate(m_BulletPrefab, m_SpawnPoint);
-            bullet.Shoot(direction);
         }
 
-        internal void ApplayDamageWithAttack()
-        {
-            m_Health.ApplayDamage(m_Power);
-        }
+        public virtual void Attack(Character shooter, Character enemy) { }
     }
 }

@@ -6,14 +6,18 @@ namespace AS.Modules.CoreCharacter
     [RequireComponent(typeof(CharacterHealth))]
     [RequireComponent(typeof(CharacterMover))]
     [RequireComponent(typeof(CharacterFighter))]
-    public class Character : MonoBehaviour, IBulletTarget
+    public class Character : MonoBehaviour, IAttackTarget
     {
         public Character Target => this;
+
+        public float AttackPower => m_Fighter.Power;
 
         private CharacterHealth m_Health;
         private CharacterAnimation m_Animation;
         private CharacterMover m_Mover;
         private CharacterFighter m_Fighter;
+
+        private Character m_AttackTarget;
 
         private void Start()
         {
@@ -32,16 +36,24 @@ namespace AS.Modules.CoreCharacter
             m_Animation.StartMove();
         }
 
-        public void Attack(Character target) =>
-            m_Fighter.Attack(this, target);
+        public void Attack(Character target)
+        {
+            m_AttackTarget = target;
+            m_Fighter.TryAttack();
+        }
 
-        public void ApplayDamageWithAttack() =>
-            m_Fighter.ApplayDamageWithAttack();
+        public void ApplayDamage(float damage) =>
+            m_Health.ApplayDamage(damage);
 
         /// <summary>
         /// Action in turn.
         /// </summary>
         public virtual void Action() { }
+
+        private void OnAttackAnimationEvent()
+        {
+            m_Fighter.Attack(this, m_AttackTarget);
+        }
 
         private void OnReachTarget()
         {

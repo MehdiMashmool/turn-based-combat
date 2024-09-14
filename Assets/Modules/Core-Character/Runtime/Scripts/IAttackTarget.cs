@@ -1,6 +1,6 @@
 namespace AS.Modules.CoreCharacter
 {
-    internal interface IBulletTarget
+    public interface IAttackTarget
     {
         Character Target { get; }
     }

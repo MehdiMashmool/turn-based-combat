@@ -16,6 +16,7 @@ namespace AS.Modules.CoreCharacter
         private void Start()
         {
             Health = m_MaxHealth;
+            UpdateHealthBar();
         }
 
         internal void ApplayDamage(float damageAmount)

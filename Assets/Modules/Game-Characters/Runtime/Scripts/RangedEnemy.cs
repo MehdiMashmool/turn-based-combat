@@ -1,6 +1,18 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 namespace AS.Modules.GameCharacters
 {
-    public class RangedEnemy : EnemyCharacter
+    internal class RangedEnemy : EnemyCharacter
     {
+        public override void Action(IReadOnlyList<Transform> path)
+        {
+            AttackPlayer();
+        }
+
+        protected override void OnAttackAnimationFinish()
+        {
+            InvokeFinishTurn();
+        }
     }
 }

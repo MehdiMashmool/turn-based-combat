@@ -1,3 +1,4 @@
+using Codice.CM.Common;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -6,8 +7,9 @@ namespace AS.Modules.CoreCharacter
 {
     internal class CharacterMover : MonoBehaviour
     {
-        [SerializeField] private float m_ReachThreshold = 0.4f;
+        [SerializeField] private float m_ReachThreshold = 0.05f;
         [SerializeField] private float m_MoveSpeed = 5;
+        [SerializeField] private float m_RotationSpeed = 120;
 
         internal event Action OnReachTarget;
 
@@ -23,9 +25,20 @@ namespace AS.Modules.CoreCharacter
             m_Moving = StartCoroutine(Moving(target));
         }
 
-        internal virtual void MoveTowards(Vector3 target)
+        protected virtual void MoveTowards(Vector3 target)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, m_MoveSpeed * Time.deltaTime);
+        }
+
+        internal virtual void UpdateRotation(Vector3 target)
+        {
+            Vector3 direction = target - transform.position;
+            direction.y = 0;
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, m_RotationSpeed * Time.deltaTime);
+            }
         }
 
         private IEnumerator Moving(Vector3 target)
@@ -33,6 +46,7 @@ namespace AS.Modules.CoreCharacter
             while (!IsReachedToTarget(target))
             {
                 MoveTowards(target);
+                UpdateRotation(target);
                 yield return null;
             }
 

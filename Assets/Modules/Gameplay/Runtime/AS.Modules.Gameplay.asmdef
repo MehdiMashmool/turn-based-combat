@@ -1,0 +1,19 @@
+{
+    "name": "AS.Modules.Gameplay",
+    "rootNamespace": "AS.Modules.Gameplay",
+    "references": [
+        "GUID:9b88c048af417fc4981fdf326c4441a7",
+        "GUID:909ed44a024bd0b499cca651168d85fe",
+        "GUID:6b5bce0b72d2b184ebe65ffbd933094d",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

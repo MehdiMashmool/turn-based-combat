@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="background-color: rgb(60, 60, 60); margin-left: 5px; margin-right: 5px; margin-top: 10px; margin-bottom: 10px;">
+        <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+            <ui:TextField picking-mode="Ignore" label="Category" value="Default" name="TextField" />
+            <ui:DropdownField index="-1" choices="System.Collections.Generic.List`1[System.String]" name="DropdownField" style="flex-shrink: 1; flex-grow: 1; padding-left: 10px;" />
+        </ui:VisualElement>
+        <uie:PropertyField name="value" label="Type:" />
+        <ui:Button text="Set Type" display-tooltip-when-elided="true" name="typebutton" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -7,12 +7,23 @@ namespace AS.Modules.GameCharacters
     {
         [SerializeField] private Transform m_SpawnPoint;
         [SerializeField] private Bullet m_BulletPrefab;
+        [SerializeField] private Vector3 m_TargetOffset = new Vector3(0, 1, 0);
 
         public override void Attack(Character shooter, Character enemy)
         {
-            Vector3 direction = enemy.transform.position - shooter.transform.position;
-            Bullet bullet = Instantiate(m_BulletPrefab, m_SpawnPoint);
-            bullet.Shoot(shooter, direction);
+            base.Attack(shooter, enemy);
+            Vector3 direction = (enemy.transform.position + m_TargetOffset) - m_SpawnPoint.transform.position;
+            Bullet bullet = Instantiate(m_BulletPrefab, m_SpawnPoint.transform.position, m_SpawnPoint.transform.rotation);
+            bullet.OnCollisionTarget += OnCollisionTarget;
+            Debug.DrawRay(m_SpawnPoint.position, direction, Color.red, 1);
+            bullet.Shoot(shooter, enemy, direction);
+        }
+
+        private void OnCollisionTarget(Bullet bullet)
+        {
+            bullet.OnCollisionTarget -= OnCollisionTarget;
+
+            InvokeFinishAttack();
         }
     }
 }

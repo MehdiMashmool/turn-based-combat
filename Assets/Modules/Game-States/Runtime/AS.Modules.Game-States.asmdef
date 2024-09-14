@@ -1,0 +1,16 @@
+{
+    "name": "AS.Modules.Game-States",
+    "rootNamespace": "AS.Modules.GameStates",
+    "references": [
+        "GUID:9b88c048af417fc4981fdf326c4441a7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

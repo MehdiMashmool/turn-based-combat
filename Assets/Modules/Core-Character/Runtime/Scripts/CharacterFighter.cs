@@ -6,6 +6,8 @@ namespace AS.Modules.CoreCharacter
     [RequireComponent(typeof(CharacterAnimation))]
     public class CharacterFighter : MonoBehaviour
     {
+        public event Action OnAttack;
+
         internal event Action OnAttackFinished;
 
         [SerializeField] private float m_Power = 25f;
@@ -23,6 +25,7 @@ namespace AS.Modules.CoreCharacter
 
         public virtual void Attack(Character shooter, Character enemy)
         {
+            OnAttack?.Invoke();
             m_Mover.UpdateRotation(enemy.transform.position);
         }
 

@@ -9,5 +9,10 @@ namespace AS.Modules.GameCharacters
         {
             AttackPlayer();
         }
+
+        protected override void OnAttackAnimationFinish()
+        {
+            InvokeFinishTurn();
+        }
     }
 }

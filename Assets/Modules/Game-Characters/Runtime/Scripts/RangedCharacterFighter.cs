@@ -14,8 +14,16 @@ namespace AS.Modules.GameCharacters
             base.Attack(shooter, enemy);
             Vector3 direction = (enemy.transform.position + m_TargetOffset) - m_SpawnPoint.transform.position;
             Bullet bullet = Instantiate(m_BulletPrefab, m_SpawnPoint.transform.position, m_SpawnPoint.transform.rotation);
+            bullet.OnCollisionTarget += OnCollisionTarget;
             Debug.DrawRay(m_SpawnPoint.position, direction, Color.red, 1);
-            bullet.Shoot(shooter, direction);
+            bullet.Shoot(shooter, enemy, direction);
+        }
+
+        private void OnCollisionTarget(Bullet bullet)
+        {
+            bullet.OnCollisionTarget -= OnCollisionTarget;
+
+            InvokeFinishAttack();
         }
     }
 }

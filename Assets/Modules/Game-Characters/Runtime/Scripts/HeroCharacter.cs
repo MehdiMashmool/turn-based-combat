@@ -18,6 +18,8 @@ namespace AS.Modules.GameCharacters
             bool haveMeleeEnemay = HaveMeleeEnemay(out m_MeleeEnemies);
             bool haveRangedEnemy = HaveRangedEnemy(out m_RangedEnemies);
 
+            OnFinishAttack += OnFinishAttackHero;
+
             if (haveMeleeEnemay && haveRangedEnemy)
             {
                 if (HaveReadyEnemyToAttack(m_MeleeEnemies))
@@ -35,8 +37,17 @@ namespace AS.Modules.GameCharacters
             }
         }
 
+        private void OnFinishAttackHero()
+        {
+            OnFinishAttack -= OnFinishAttackHero;
+
+            InvokeFinishTurn();
+        }
+
         private void FindEnemies()
         {
+            m_Enemies.Clear();
+
             Physics.OverlapSphereNonAlloc(transform.position, float.MaxValue, m_Results);
 
             for (int i = 0; i < m_Results.Length; i++)

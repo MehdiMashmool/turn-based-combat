@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using AS.Modules.CoreCharacter;
 
 namespace AS.Modules.GameCharacters
 {
@@ -24,7 +25,7 @@ namespace AS.Modules.GameCharacters
             }
         }
 
-        private void OnReachTargetMeleeEnemy(CoreCharacter.Character obj)
+        private void OnReachTargetMeleeEnemy(Character enemy)
         {
             OnReachTarget -= OnReachTargetMeleeEnemy;
 

@@ -18,6 +18,11 @@ namespace AS.Modules.CoreCharacter
             remove => m_Health.OnDie -= value;
         }
         public event Action<Character> OnReachTarget;
+        public event Action OnFinishAttack
+        {
+            add => m_Fighter.OnAttackFinished += value;
+            remove => m_Fighter.OnAttackFinished -= value;
+        }
 
         public Character Target => this;
         public float AttackPower => m_Fighter.Power;
@@ -64,10 +69,7 @@ namespace AS.Modules.CoreCharacter
             OnFinishTurn?.Invoke(this);
         }
 
-        protected virtual void OnAttackAnimationFinish() 
-        {
-            InvokeFinishTurn();
-        }
+        protected virtual void OnAttackAnimationFinish() { }
 
         private void Initialize()
         {

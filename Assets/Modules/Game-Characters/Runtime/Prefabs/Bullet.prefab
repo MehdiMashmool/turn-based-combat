@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5921639668458730872}
-  - component: {fileID: 8382993137478513983}
+  - component: {fileID: 2080987747538878423}
   - component: {fileID: 8073158207479589489}
   m_Layer: 0
   m_Name: Bullet
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 8138948390924295541}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8382993137478513983
+--- !u!114 &2080987747538878423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +43,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5532893717877487156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb6d772e379ada4dbe04c2382f40a7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 42837637bf8a0be458d22688908e5503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Speed: 1
+  m_Chance: 80
+  m_TargetOffset: {x: 0, y: 1, z: 0}
 --- !u!136 &8073158207479589489
 CapsuleCollider:
   m_ObjectHideFlags: 0

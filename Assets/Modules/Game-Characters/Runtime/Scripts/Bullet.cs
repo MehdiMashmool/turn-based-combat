@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using AS.Modules.CoreCharacter;
@@ -8,12 +9,24 @@ namespace AS.Modules.GameCharacters
     {
         [SerializeField] private float m_Speed = 50f;
 
-        private Character m_Shooter;
+        internal event Action<Bullet> OnCollisionTarget;
 
-        internal void Shoot(Character shooter, Vector3 direction)
+        protected Character Shooter { private set; get; }
+        protected Character Target { private set; get; }
+
+        private Coroutine m_Moving;
+
+        internal void Shoot(Character shooter, Character target, Vector3 direction)
         {
-            m_Shooter = shooter;
-            StartCoroutine(Moving(direction));
+            Shooter = shooter;
+            Target = target;
+
+            if (m_Moving != null)
+            {
+                StopCoroutine(m_Moving);
+            }
+
+            m_Moving = StartCoroutine(Moving(direction));
         }
 
         private IEnumerator Moving(Vector3 direction)
@@ -26,14 +39,21 @@ namespace AS.Modules.GameCharacters
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        protected void InvokeCollisionTarget()
+        {
+            OnCollisionTarget?.Invoke(this);
+        }
+
+        protected virtual void OnTriggerEnter(Collider other)
         {
             IAttackTarget target = other.GetComponent<IAttackTarget>();
 
             if (target != null)
             {
-                target.Target.ApplayDamage(m_Shooter.AttackPower);
+                target.Target.ApplayDamage(Shooter.AttackPower);
             }
+
+            InvokeCollisionTarget();
 
             Destroy(this.gameObject);
         }

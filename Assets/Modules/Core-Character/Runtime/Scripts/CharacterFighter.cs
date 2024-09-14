@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace AS.Modules.CoreCharacter
@@ -5,6 +6,8 @@ namespace AS.Modules.CoreCharacter
     [RequireComponent(typeof(CharacterAnimation))]
     public class CharacterFighter : MonoBehaviour
     {
+        internal event Action OnAttackFinished;
+
         [SerializeField] private float m_Power = 25f;
 
         internal float Power => m_Power;
@@ -18,14 +21,19 @@ namespace AS.Modules.CoreCharacter
             m_Mover = GetComponent<CharacterMover>();
         }
 
+        public virtual void Attack(Character shooter, Character enemy)
+        {
+            m_Mover.UpdateRotation(enemy.transform.position);
+        }
+
         internal void TryAttack()
         {
             m_Animation.Attack();
         }
 
-        public virtual void Attack(Character shooter, Character enemy) 
+        protected void InvokeFinishAttack()
         {
-            m_Mover.UpdateRotation(enemy.transform.position);
+            OnAttackFinished?.Invoke();
         }
     }
 }

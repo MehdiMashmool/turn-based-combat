@@ -1,0 +1,19 @@
+{
+    "samples": [
+        {
+            "displayName": "Sample1",
+            "description": "This sample1",
+            "path": "Samples~/Sample1"
+        },
+        {
+            "displayName": "Sample2",
+            "description": "This sample2",
+            "path": "Samples~/Sample2"
+        },
+        {
+            "displayName": "Sample3",
+            "description": "This sample3",
+            "path": "Samples~/Sample3"
+        }
+    ]
+}

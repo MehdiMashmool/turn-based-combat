@@ -302,6 +302,9 @@ PrefabInstance:
       addedObject: {fileID: 4404472283105871230}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8100352889376307570}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 5929071220791042173}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
       insertIndex: -1
@@ -315,6 +318,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2965879448185631240}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6992997982846875408}
   m_SourcePrefab: {fileID: 100100000, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}
 --- !u!4 &4635373954111642908 stripped
 Transform:
@@ -388,6 +394,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd7c8fe53a0f5042a77ebdca876e1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &8100352889376307570
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413318651075643302}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &5929071220791042173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,6 +561,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Die: {fileID: 4250719329739849258}
   m_Hit: {fileID: 2782753452569447152}
+--- !u!114 &6992997982846875408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413318651075643302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a26f40c935b3af4bacae5ed003155a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Die: {fileID: 8300000, guid: 7b7622912de041e4b9b45507a3277b05, type: 3}
+  m_Hit: {fileID: 8300000, guid: 5304ce5122a24db46b8a66942210aa0a, type: 3}
 --- !u!4 &7396923294083626719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 9ca2f93362f27454a80c763ced4db201, type: 3}

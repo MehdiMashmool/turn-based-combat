@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: efc567018967d4274a52d370e8be0f7d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282082
+  packageName: Projectile Factory for POLYGON Particle FX by Synty Studios
+  packageVersion: 1.0.2
+  assetPath: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store
+    Integrations/Synty Studios POLYGON Particle FX/Particles/Impacts/POLYGON Particle
+    - FX_Fire_Explosion_01.prefab
+  uploadId: 657290

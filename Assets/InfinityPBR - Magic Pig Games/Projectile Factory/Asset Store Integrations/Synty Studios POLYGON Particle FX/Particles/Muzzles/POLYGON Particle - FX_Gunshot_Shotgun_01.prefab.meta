@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: da93a4a4dd93746ac916e72e64ab61d1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282082
+  packageName: Projectile Factory for POLYGON Particle FX by Synty Studios
+  packageVersion: 1.0.2
+  assetPath: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store
+    Integrations/Synty Studios POLYGON Particle FX/Particles/Muzzles/POLYGON Particle
+    - FX_Gunshot_Shotgun_01.prefab
+  uploadId: 657290

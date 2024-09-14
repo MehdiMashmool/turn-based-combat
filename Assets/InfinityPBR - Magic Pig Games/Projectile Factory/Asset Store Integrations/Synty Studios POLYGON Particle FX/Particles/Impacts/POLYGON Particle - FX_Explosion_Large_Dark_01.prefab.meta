@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 39d7e780a9f6e470a94bf5415525572e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282082
+  packageName: Projectile Factory for POLYGON Particle FX by Synty Studios
+  packageVersion: 1.0.2
+  assetPath: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store
+    Integrations/Synty Studios POLYGON Particle FX/Particles/Impacts/POLYGON Particle
+    - FX_Explosion_Large_Dark_01.prefab
+  uploadId: 657290

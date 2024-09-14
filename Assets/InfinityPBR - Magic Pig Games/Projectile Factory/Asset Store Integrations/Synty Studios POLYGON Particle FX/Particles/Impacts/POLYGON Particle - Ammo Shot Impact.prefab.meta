@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c25cdb3daffa54c60b786ee8918d2fc6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282082
+  packageName: Projectile Factory for POLYGON Particle FX by Synty Studios
+  packageVersion: 1.0.2
+  assetPath: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store
+    Integrations/Synty Studios POLYGON Particle FX/Particles/Impacts/POLYGON Particle
+    - Ammo Shot Impact.prefab
+  uploadId: 657290

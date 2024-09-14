@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 137e1c7d571d5416e92ef976633e9ead
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282082
+  packageName: Projectile Factory for POLYGON Particle FX by Synty Studios
+  packageVersion: 1.0.2
+  assetPath: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store
+    Integrations/Synty Studios POLYGON Particle FX/Particles/Muzzles/POLYGON Particle
+    - FX_CannonShot_01.prefab
+  uploadId: 657290

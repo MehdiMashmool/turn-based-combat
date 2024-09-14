@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0589e55125895b34ba416e9e794ecb4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ReachThreshold: 0.4
+  m_ReachThreshold: 0.05
   m_MoveSpeed: 5
 --- !u!114 &3550856401380238606
 MonoBehaviour:
@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Power: 25
   m_SpawnPoint: {fileID: 8233063849552106615}
   m_BulletPrefab: {fileID: 3700723075656413155, guid: 1516f584300b67b4193164a5eb6dbc29, type: 3}
+  m_TargetOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &7906385834021064511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72b6b1d782fb88d488b001fa0f732a7c, type: 3}

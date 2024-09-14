@@ -59,7 +59,7 @@ namespace AS.Modules.CoreCharacter
         /// </summary>
         public virtual void Action(IReadOnlyList<Transform> path) { }
 
-        internal void InvokeFinishTurn()
+        protected void InvokeFinishTurn()
         {
             OnFinishTurn?.Invoke(this);
         }

@@ -6,6 +6,7 @@ namespace AS.Modules.GameCharacters
     {
         public override void Attack(Character shooter, Character enemy)
         {
+            base.Attack(shooter, enemy);
             enemy.ApplayDamage(shooter.AttackPower);
         }
     }

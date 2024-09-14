@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0589e55125895b34ba416e9e794ecb4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ReachThreshold: 0.4
+  m_ReachThreshold: 0.05
   m_MoveSpeed: 5
 --- !u!114 &1030270013783209082
 MonoBehaviour:

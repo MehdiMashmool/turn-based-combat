@@ -12,15 +12,23 @@ namespace AS.Modules.GameCharacters
 
         public override void Action(IReadOnlyList<Transform> path)
         {
-            if (m_TurnCount >= 3)
+            if (m_TurnCount >= 2)
             {
                 AttackPlayer();
             }
             else
             {
-                Move(path[m_TurnCount].position);
                 m_TurnCount++;
+                OnReachTarget += OnReachTargetMeleeEnemy;
+                Move(path[m_TurnCount].position);
             }
+        }
+
+        private void OnReachTargetMeleeEnemy(CoreCharacter.Character obj)
+        {
+            OnReachTarget -= OnReachTargetMeleeEnemy;
+
+            InvokeFinishTurn();
         }
     }
 }

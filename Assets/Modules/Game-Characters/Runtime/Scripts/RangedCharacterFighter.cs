@@ -11,9 +11,10 @@ namespace AS.Modules.GameCharacters
 
         public override void Attack(Character shooter, Character enemy)
         {
+            base.Attack(shooter, enemy);
             Vector3 direction = (enemy.transform.position + m_TargetOffset) - m_SpawnPoint.transform.position;
             Bullet bullet = Instantiate(m_BulletPrefab, m_SpawnPoint.transform.position, m_SpawnPoint.transform.rotation);
-            Debug.DrawRay(m_SpawnPoint.position, direction, Color.red, 10);
+            Debug.DrawRay(m_SpawnPoint.position, direction, Color.red, 1);
             bullet.Shoot(shooter, direction);
         }
     }

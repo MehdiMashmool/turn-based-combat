@@ -1169,6 +1169,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 412362858}
     - target: {fileID: 4576323333922396754, guid: 6f47abb6ec90bfc4eb2057d875e40997, type: 3}
+      propertyPath: m_MaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576323333922396754, guid: 6f47abb6ec90bfc4eb2057d875e40997, type: 3}
       propertyPath: m_Paths.Array.size
       value: 3
       objectReference: {fileID: 0}

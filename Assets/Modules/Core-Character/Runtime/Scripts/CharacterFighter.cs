@@ -10,12 +10,12 @@ namespace AS.Modules.CoreCharacter
         internal float Power => m_Power;
 
         private CharacterAnimation m_Animation;
-        private CharacterHealth m_Health;
+        private CharacterMover m_Mover;
 
         private void Start()
         {
             m_Animation = GetComponent<CharacterAnimation>();
-            m_Health = GetComponent<CharacterHealth>();
+            m_Mover = GetComponent<CharacterMover>();
         }
 
         internal void TryAttack()
@@ -23,6 +23,9 @@ namespace AS.Modules.CoreCharacter
             m_Animation.Attack();
         }
 
-        public virtual void Attack(Character shooter, Character enemy) { }
+        public virtual void Attack(Character shooter, Character enemy) 
+        {
+            m_Mover.UpdateRotation(enemy.transform.position);
+        }
     }
 }

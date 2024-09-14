@@ -7,7 +7,14 @@ namespace AS.Modules.GameCharacters
     {
         public override void Action(IReadOnlyList<Transform> path)
         {
-            AttackPlayer();
+            if (IsAlive)
+            {
+                AttackPlayer();
+            }
+            else
+            {
+                InvokeFinishTurn();
+            }
         }
 
         protected override void OnAttackAnimationFinish()

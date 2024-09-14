@@ -950,6 +950,7 @@ MonoBehaviour:
   m_ResultPanel: {fileID: 1424980973}
   m_ResultText: {fileID: 199277864}
   m_Button: {fileID: 409618688}
+  m_DisplayDelay: 2
   m_WinText: You Win!
   m_LoseText: 'You Lose ):'
 --- !u!4 &485190823

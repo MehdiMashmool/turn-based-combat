@@ -1,12 +1,13 @@
-using System;
+using UnityEngine;
+using System.Collections.Generic;
 
 namespace AS.Modules.GameCharacters
 {
-    public class RangedEnemy : EnemyCharacter
+    internal class RangedEnemy : EnemyCharacter
     {
-        public override void Action()
+        public override void Action(IReadOnlyList<Transform> path)
         {
-            throw new NotImplementedException();
+            AttackPlayer();
         }
     }
 }

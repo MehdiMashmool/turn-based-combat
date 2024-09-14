@@ -19,11 +19,20 @@ namespace AS.Modules.GameStates
 
         protected override void OnEnterTree()
         {
+            m_SpawnGameState.OnFinish += OnFinishSpawn;
             Switch(m_SpawnGameState);
+
+        }
+
+        private void OnFinishSpawn()
+        {
+            m_SpawnGameState.OnFinish -= OnFinishSpawn;
+
             m_TurnGameState.OnAllEnemiesDie += OnAllEnemiesDie;
             m_TurnGameState.OnPlayerDie += OnPlayerDie;
 
             Switch(m_TurnGameState);
+
         }
 
         private void OnPlayerDie()
@@ -38,6 +47,7 @@ namespace AS.Modules.GameStates
 
         protected override void OnExitTree()
         {
+            m_SpawnGameState.OnFinish -= OnFinishSpawn;
             m_TurnGameState.OnAllEnemiesDie -= OnAllEnemiesDie;
             m_TurnGameState.OnPlayerDie -= OnPlayerDie;
         }

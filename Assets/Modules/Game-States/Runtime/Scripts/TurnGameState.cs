@@ -27,7 +27,7 @@ namespace AS.Modules.GameStates
             }
 
             Target.Player.OnFinishTurn += OnFinishPlayerTurn;
-            Target.Player.Action();
+            Target.Player.Action(null);
         }
 
         protected override void OnExitAsyncLeaf()
@@ -53,7 +53,7 @@ namespace AS.Modules.GameStates
         {
             Character enemy = Target.Enemies[m_EnemayTurnIndex];
             enemy.OnFinishTurn += OnFinishEnemyTurn;
-            enemy.Action();
+            enemy.Action(Target.Paths[m_EnemayTurnIndex].Paths);
         }
 
         private void OnFinishEnemyTurn(Character enemy)
@@ -67,7 +67,7 @@ namespace AS.Modules.GameStates
                 m_EnemayTurnIndex = 0;
 
                 Target.Player.OnFinishTurn += OnFinishPlayerTurn;
-                Target.Player.Action();
+                Target.Player.Action(null);
             }
             else
             {

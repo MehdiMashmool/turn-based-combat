@@ -1,12 +1,26 @@
-using System;
+using UnityEngine;
+using System.Collections.Generic;
 
 namespace AS.Modules.GameCharacters
 {
-    public class MeleeEnemy : EnemyCharacter 
+    internal class MeleeEnemy : EnemyCharacter
     {
-        public override void Action()
+        internal bool CanAttackInNextTurn => m_TurnCount >= 3;
+        internal int TurnCount => m_TurnCount;
+
+        private int m_TurnCount = 0;
+
+        public override void Action(IReadOnlyList<Transform> path)
         {
-            throw new NotImplementedException();
+            if (m_TurnCount >= 3)
+            {
+                AttackPlayer();
+            }
+            else
+            {
+                Move(path[m_TurnCount].position);
+                m_TurnCount++;
+            }
         }
     }
 }

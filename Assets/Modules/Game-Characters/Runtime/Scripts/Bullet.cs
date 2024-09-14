@@ -22,7 +22,7 @@ namespace AS.Modules.GameCharacters
             {
                 transform.position += direction * m_Speed * Time.deltaTime;
                 transform.rotation = Quaternion.LookRotation(direction);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
         }
 

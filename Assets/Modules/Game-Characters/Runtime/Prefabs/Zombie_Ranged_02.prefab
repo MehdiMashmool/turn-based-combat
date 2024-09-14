@@ -292,7 +292,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.28
+  m_Radius: 0.5
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.7790994, z: 0}
@@ -364,7 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Power: 25
   m_SpawnPoint: {fileID: 6230585539923874142}
-  m_BulletPrefab: {fileID: 8382993137478513983, guid: 5b5f53985bba4c14a9427c59e421350e, type: 3}
+  m_BulletPrefab: {fileID: 3700723075656413155, guid: 1516f584300b67b4193164a5eb6dbc29, type: 3}
+  m_TargetOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &8383093012801246706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5092beedcfb39294c956f1c101def67a, type: 3}

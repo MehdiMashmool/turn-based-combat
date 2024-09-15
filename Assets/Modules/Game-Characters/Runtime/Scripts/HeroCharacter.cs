@@ -63,7 +63,7 @@ namespace AS.Modules.GameCharacters
 
                 EnemyCharacter enemyCharacter = m_Results[i].GetComponent<EnemyCharacter>();
 
-                if (enemyCharacter != null)
+                if (enemyCharacter != null && enemyCharacter.IsAlive)
                 {
                     m_Enemies.Add(enemyCharacter);
                 }
@@ -77,7 +77,7 @@ namespace AS.Modules.GameCharacters
 
             for (int i = 0; i < m_Enemies.Count; i++)
             {
-                if (m_Enemies[i] is RangedEnemy rangedEnemy)
+                if (m_Enemies[i] is RangedEnemy rangedEnemy && rangedEnemy.IsAlive)
                 {
                     result = true;
                     rangedEnemies.Add(rangedEnemy);
@@ -94,7 +94,7 @@ namespace AS.Modules.GameCharacters
 
             for (int i = 0; i < m_Enemies.Count; i++)
             {
-                if (m_Enemies[i] is MeleeEnemy meleeEnemy)
+                if (m_Enemies[i] is MeleeEnemy meleeEnemy && meleeEnemy.IsAlive)
                 {
                     result = true;
                     meleeEnemies.Add(meleeEnemy);

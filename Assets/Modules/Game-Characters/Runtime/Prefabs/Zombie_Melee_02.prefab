@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CharacterHUD: {fileID: 2443215914730335347}
-  m_MaxHealth: 100
+  m_MaxHealth: 25
 --- !u!114 &4098806249707639721
 MonoBehaviour:
   m_ObjectHideFlags: 0

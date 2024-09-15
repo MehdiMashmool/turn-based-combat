@@ -45,6 +45,11 @@ namespace AS.Modules.Gameplay
         private void OnDie()
         {
             Character enemy = GetDiedEnemy();
+            if (enemy == null)
+            {
+                return;
+            }
+
             CoinRewrad coinReward = Instantiate(m_CoinRewardPrefab, m_MainCanvas);
             coinReward.transform.SetAsFirstSibling();
             coinReward.OnReach += OnReach;

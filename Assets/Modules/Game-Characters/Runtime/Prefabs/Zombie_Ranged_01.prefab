@@ -23,7 +23,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6865694513865845284}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0905, z: 0.0358}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,6 +30,7 @@ Transform:
   m_Children:
   - {fileID: 8663881859432040189}
   m_Father: {fileID: 5425199830144591100}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3409992532908768046
 PrefabInstance:
@@ -167,6 +167,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7906385834021064511}
     m_Modifications:
+    - target: {fileID: 6239118159362151746, guid: f731461791cea7048b71770bbc62a510, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6525556781767550491, guid: f731461791cea7048b71770bbc62a510, type: 3}
       propertyPath: m_Name
       value: Canvas_Character_Zombie
@@ -473,7 +477,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -673,7 +676,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DeactiveObjects:
-  - {fileID: 7418256149917586821}
   - {fileID: 834924080118175211}
   - {fileID: 4901341691319906750}
   - {fileID: 3991372293983244240}
